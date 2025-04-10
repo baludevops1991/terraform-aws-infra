@@ -3,7 +3,7 @@ name: Terraform UAT Deployment
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - 'environments/uat/**'
       - '.github/workflows/uat.yml'
@@ -41,5 +41,5 @@ jobs:
         run: terraform plan -input=false -var-file="terraform.tfvars"
 
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         run: terraform apply -auto-approve -input=false -var-file="terraform.tfvars"
