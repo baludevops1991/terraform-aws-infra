@@ -1,0 +1,11 @@
+aws_region = "ap-south-1"
+#aws_profile   = "uat-profile"
+vpc_cidr      = "10.0.0.0/16"
+vpc_name      = "uat"
+azs           = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+public_cidrs  = ["10.0.1.0/24", "10.0.2.0/24"]
+private_cidrs = ["10.0.10.0/24", "10.0.20.0/24", "10.0.30.0/24"]
+environment   = "uat"
+key_name      = "AdminKey"
+db_usernames  = ["master"]
+db_passwords  = ["P#ssw0rd3!"]
